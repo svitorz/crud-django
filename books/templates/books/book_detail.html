@@ -1,3 +1,15 @@
-<h1>Book Details</h1>
-<h2>Name: {{object.name}}</h2>
-Pages: {{ object.pages }}
+{% extends "layout.html" %}
+
+{% block conteudo %}
+<h1 class="text-center py-5 primary-text">Detalhes</h1>
+<h2 class="mx-3">
+    Nome: {{object.name}}
+</h2>
+<p class="display-5 p-1">
+    Páginas: {{ object.pages }}
+</p>
+
+<a href="{% url "book_list" %}" class="btn btn-primary m-4">
+    Voltar
+</a>
+{% endblock conteudo %}

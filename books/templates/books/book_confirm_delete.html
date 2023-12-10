@@ -1,5 +1,11 @@
-<h1>Book Delete</h1>
-<form method="post">{% csrf_token %}
-    Are you sure you want to delete "{{ object }}" ?
-    <input type="submit" value="Submit" />
+{% extends "layout.html" %}
+
+{% block conteudo %}
+<h1 class="text-center py-5 primary-text">Book Delete</h1>
+<form class="alert alert-danger" method="post">{% csrf_token %}
+    <div>
+    Deseja deletar "{{ object }}" ?
+</div>
+<input class="btn btn-outline-danger" type="submit" value="Deletar" />
 </form>
+{% endblock conteudo %}
